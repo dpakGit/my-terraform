@@ -1,3 +1,5 @@
+# This code creates an EC2 instance with the specified key pair, security group, and outputs the instance IP and SSH command.
+
 provider "aws" {
   region = "us-east-1" # Change to your desired AWS region
 }
@@ -49,4 +51,4 @@ output "ssh_command" {
   value = "ssh -i /home/bob/devops-kp.pem ec2-user@${aws_instance.example.public_ip}"
 }
 
-This code creates an EC2 instance with the specified key pair, security group, and outputs the instance IP and SSH command.
+
